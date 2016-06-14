@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
 
-  get '/' => 'pages#welcome'
+  # get '/' => 'pages#welcome'
 
-  get '/:id' => 'people#detail'
+  # get '/' => 'welcome#home'
+  root 'welcome#home'
+
+  get '/:id' => 'welcome#detail'
+
+  get "/lorem/:type" => 'welcome#lorem'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
